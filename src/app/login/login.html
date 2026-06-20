@@ -1,2 +1,6 @@
-<p>login works!</p>
 <h1>{{title}}</h1>
+<div [style.width.px]="boxWidth" [style.background-color] ="bgClr" [style.height.px]="boxHeight">
+<img [src]="imageUrl" alt="fluffy cat"/>
+</div>
+<button [disabled]="!isDisabled">adopt me</button>
+<p [innerText]="'count:' + count()"></p>

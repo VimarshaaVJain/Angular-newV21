@@ -1,0 +1,17 @@
+img{
+    height: 300px;
+    width: 300px;
+    margin: 4px;
+}
+
+button{
+    color: red;
+    background-color: greenyellow;
+    height: 35px;
+    width: 90px;
+    cursor: pointer;
+   
+} :disabled{
+        background-color: beige;
+        cursor: not-allowed;
+    }

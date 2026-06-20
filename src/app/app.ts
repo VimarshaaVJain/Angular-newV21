@@ -11,6 +11,16 @@ import { Events } from './events/events';
   styleUrl: './app.scss'
 })
 export class App {
-  name = 'RV Tutorials';
- 
+  // name = 'RV Tutorials';
+  // name = 'Rohit';
+  count = 0;
+  handleClick() {
+    console.log("Submitted!!")
+    this.increament();
+  }
+
+  increament() {
+    this.count++;
+  }
+
 }

@@ -1,0 +1,12 @@
+<button (click)="increament()">click Me!</button>
+<!-- <p>Count:{{count}}</p> -->
+ <p>Count: {{count()}}</p>
+
+<button (click)="showEvent($event)">dont click</button>
+<input type="text" (input)="updateName($event.target.value)">
+<p>Name : {{name}}</p>
+
+<form (submit)="submitForm($event)">
+    <input placeholder="first_name">
+    <button>submit</button>
+</form>

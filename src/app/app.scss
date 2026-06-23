@@ -1,18 +1,74 @@
-button {
-    height: 40px;
-    width: 100px;
-    color: white;
-    background-color: black;
-    cursor: pointer;
-}
-
-.hover {
-    margin-top: 20px;
-    height: 200px;
-    width: 200px;
-    color: black;
-    background-color: yellowgreen;
+.app-cls {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.counter-cls {
+    color: black;
+    font-weight: 700;
+    font-size: 56px;
+}
+
+.inc-btn {
+    height: 60px;
+    width: 60px;
+    color: white;
+    font-size: 26px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgb(162, 204, 79);
+    cursor: pointer;
+}
+
+.dec-btn {
+    height: 60px;
+    width: 60px;
+    color: white;
+    font-size: 26px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgb(235, 122, 141);
+    cursor: pointer;
+}
+
+.reset-btn {
+    height: 60px;
+    width: 100px;
+    color: white;
+    font-size: 26px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgb(122, 158, 235);
+    cursor: pointer;
+}
+
+.btns {
+    margin: 2%;
+}
+
+h1 {
+    color: rgb(247, 63, 118);
+}
+
+
+
+// button {
+//     height: 40px;
+//     width: 100px;
+//     color: white;
+//     background-color: black;
+//     cursor: pointer;
+// }
+
+// .hover {
+//     margin-top: 20px;
+//     height: 200px;
+//     width: 200px;
+//     color: black;
+//     background-color: yellowgreen;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }

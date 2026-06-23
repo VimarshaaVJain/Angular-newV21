@@ -1,3 +1,14 @@
+<div class="app-cls">
+    <h1>Simple Counter</h1>
+    <p class="counter-cls">{{counter}}</p>
+    <div class="btns">
+        <button class="inc-btn" (click)="onClick('add')">+</button>
+        <button class="dec-btn" (click)="onClick('sub')">-</button>
+        <button class="reset-btn" (click)="onClick('reset')">Reset</button>
+    </div>
+</div>
+
+<!-- click events, datatypes, interpolation, creating components -->
 <!-- <h1>{{name}}</h1> -->
 <!-- <p>{{name}}</p>
 <app-events></app-events> -->
@@ -6,11 +17,11 @@
 <!-- <h1>{{count}}</h1>
 <button (click)="handleClick()">Submit</button> -->
 
-<button (click)="onClick()">Click me</button>
+<!-- <button (click)="onClick()">Click me</button>
 
 <input (input)="onInput($event)">
 
 <input (keyup)="onKeyUp($event)" (focus)="onFocus()" (blur)="onBlur()">
 
 
-<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div>
+<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div> -->

@@ -11,6 +11,8 @@ import { Events } from './events/events';
   styleUrl: './app.scss'
 })
 export class App {
+  value: string | number = "10"; //  if a variable has multiple datatype then, it is called union type
+
   // name = 'RV Tutorials';
   // name = 'Rohit';
   count = 0;

@@ -15,14 +15,42 @@ export class App {
 
   // name = 'RV Tutorials';
   // name = 'Rohit';
-  count = 0;
-  handleClick() {
-    console.log("Submitted!!")
-    this.increament();
+  // count = 0;
+  // handleClick() {
+  //   console.log("Submitted!!")
+  //   this.increament();
+  // }
+
+  // increament() {
+  //   this.count++;
+  // }
+
+  onClick() {
+    alert('Clicked');
   }
 
-  increament() {
-    this.count++;
+  onInput(event: any) {
+    console.log("Inside Input field", event.target.value);
+  }
+
+  onKeyUp(event: any) {
+    console.log("keyUp", event.target.value);
+  }
+
+  onBlur() {
+    console.log("blur Event");
+  }
+
+  onFocus() {
+    console.log("focus Event");
+  }
+
+  onMouse() {
+    console.log("Mouse enter");
+  }
+
+  offMouse() {
+    console.log("Mouse exit");
   }
 
 }

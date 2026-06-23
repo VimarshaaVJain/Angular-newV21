@@ -3,5 +3,14 @@
 <app-events></app-events> -->
 <!-- <app-login></app-login> -->
 <!-- <app=signin></app-signin> -->
-<h1>{{count}}</h1>
-<button (click)="handleClick()">Submit</button>
+<!-- <h1>{{count}}</h1>
+<button (click)="handleClick()">Submit</button> -->
+
+<button (click)="onClick()">Click me</button>
+
+<input (input)="onInput($event)">
+
+<input (keyup)="onKeyUp($event)" (focus)="onFocus()" (blur)="onBlur()">
+
+
+<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div>

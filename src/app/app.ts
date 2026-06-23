@@ -11,7 +11,18 @@ import { Events } from './events/events';
   styleUrl: './app.scss'
 })
 export class App {
-  value: string | number = "10"; //  if a variable has multiple datatype then, it is called union type
+  name: string = "";
+  city: string = "";
+  email: string = "";
+
+  updateName(str: string) {
+    this.name = str;
+  }
+
+  getAge(value: string) {
+    this.email = value;
+  }
+  // value: string | number = "10"; //  if a variable has multiple datatype then, it is called union type
 
   // name = 'RV Tutorials';
   // name = 'Rohit';
@@ -25,32 +36,32 @@ export class App {
   //   this.count++;
   // }
 
-  onClick() {
-    alert('Clicked');
-  }
+  // onClick() {
+  //   alert('Clicked');
+  // }
 
-  onInput(event: any) {
-    console.log("Inside Input field", event.target.value);
-  }
+  // onInput(event: any) {
+  //   console.log("Inside Input field", event.target.value);
+  // }
 
-  onKeyUp(event: any) {
-    console.log("keyUp", event.target.value);
-  }
+  // onKeyUp(event: any) {
+  //   console.log("keyUp", event.target.value);
+  // }
 
-  onBlur() {
-    console.log("blur Event");
-  }
+  // onBlur() {
+  //   console.log("blur Event");
+  // }
 
-  onFocus() {
-    console.log("focus Event");
-  }
+  // onFocus() {
+  //   console.log("focus Event");
+  // }
 
-  onMouse() {
-    console.log("Mouse enter");
-  }
+  // onMouse() {
+  //   console.log("Mouse enter");
+  // }
 
-  offMouse() {
-    console.log("Mouse exit");
-  }
+  // offMouse() {
+  //   console.log("Mouse exit");
+  // }
 
 }

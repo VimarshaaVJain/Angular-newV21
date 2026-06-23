@@ -1,3 +1,14 @@
+<input (input)="updateName($event.target.value)" placeholder="Enter your Name">
+<p>Your Name: {{name}}</p>
+
+<input (input)="city = $event.target.value" placeholder="Enter your City">
+<p>Your City: {{city}}</p>
+
+<input #userInput placeholder="Enter your Email">
+<button (click)="getAge(userInput.value)">Get Email</button>
+<p>Your Email: {{email}}</p>
+
+
 <!-- <h1>{{name}}</h1> -->
 <!-- <p>{{name}}</p>
 <app-events></app-events> -->
@@ -6,11 +17,11 @@
 <!-- <h1>{{count}}</h1>
 <button (click)="handleClick()">Submit</button> -->
 
-<button (click)="onClick()">Click me</button>
+<!-- <button (click)="onClick()">Click me</button>
 
 <input (input)="onInput($event)">
 
 <input (keyup)="onKeyUp($event)" (focus)="onFocus()" (blur)="onBlur()">
 
 
-<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div>
+<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div> -->

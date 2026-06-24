@@ -1,18 +1,7 @@
-button {
-    height: 40px;
-    width: 100px;
-    color: white;
-    background-color: black;
-    cursor: pointer;
-}
-
-.hover {
-    margin-top: 20px;
-    height: 200px;
-    width: 200px;
+.hero-box {
     color: black;
-    background-color: yellowgreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: gold;
+    padding: 10px;
+    font-size: 36px;
+    font-weight: 700;
 }

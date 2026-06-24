@@ -1,16 +1,51 @@
-<!-- <h1>{{name}}</h1> -->
-<!-- <p>{{name}}</p>
-<app-events></app-events> -->
-<!-- <app-login></app-login> -->
-<!-- <app=signin></app-signin> -->
-<!-- <h1>{{count}}</h1>
-<button (click)="handleClick()">Submit</button> -->
+@switch (value){
+@case ('home'){
+<p>Home Page</p>
+}
+@case ('about'){
+<p>About Page</p>
+}
+@case ('contact'){
+<p>Contact Page</p>
+}
+@default {
+<p>Page Not Found</p>
+}
+}
 
-<button (click)="onClick()">Click me</button>
 
-<input (input)="onInput($event)">
+<button (click)="tab='home'">Home</button>
+<button (click)="tab='about'">About</button>
+<button (click)="tab='contact'">Contact</button>
 
-<input (keyup)="onKeyUp($event)" (focus)="onFocus()" (blur)="onBlur()">
+@switch (tab){
+@case ('home'){
+<p>Home Page</p>
+}
+@case ('about'){
+<p>About Page</p>
+}
+@case ('contact'){
+<p>Contact Page</p>
+}
+@default {
+<p>Page Not Found</p>
+}
+}
 
+<input (input)="updateCategories($event.target.value)" placeholder="Enter category" />
 
-<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div>
+@switch (categories){
+@case ('fruit'){
+<p>Fruits</p>
+}
+@case ('veg'){
+<p>Veggies</p>
+}
+@case ('non-veg'){
+<p>Non-Vegetable</p>
+}
+@default {
+<p>Not Found</p>
+}
+}

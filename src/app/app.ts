@@ -11,46 +11,17 @@ import { Events } from './events/events';
   styleUrl: './app.scss'
 })
 export class App {
-  value: string | number = "10"; //  if a variable has multiple datatype then, it is called union type
+  items = ['HTML', 'Css', 'JavaScript', 'Angular'];
+  users = [{ name: 'Ro', age: 31 },
+  { name: 'Vo', age: 30 },
+  { name: 'Mo', age: 23 }
+  ];
 
-  // name = 'RV Tutorials';
-  // name = 'Rohit';
-  // count = 0;
-  // handleClick() {
-  //   console.log("Submitted!!")
-  //   this.increament();
-  // }
+  fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
 
-  // increament() {
-  //   this.count++;
-  // }
+  nums = [20, 10, 15, 30, 45, 22, 39, 67];
 
-  onClick() {
-    alert('Clicked');
+  remove(i: number) {
+    this.fruits.splice(i, 1);
   }
-
-  onInput(event: any) {
-    console.log("Inside Input field", event.target.value);
-  }
-
-  onKeyUp(event: any) {
-    console.log("keyUp", event.target.value);
-  }
-
-  onBlur() {
-    console.log("blur Event");
-  }
-
-  onFocus() {
-    console.log("focus Event");
-  }
-
-  onMouse() {
-    console.log("Mouse enter");
-  }
-
-  offMouse() {
-    console.log("Mouse exit");
-  }
-
 }

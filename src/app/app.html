@@ -1,16 +1,40 @@
-<!-- <h1>{{name}}</h1> -->
-<!-- <p>{{name}}</p>
-<app-events></app-events> -->
-<!-- <app-login></app-login> -->
-<!-- <app=signin></app-signin> -->
-<!-- <h1>{{count}}</h1>
-<button (click)="handleClick()">Submit</button> -->
+@for (i of items; track $index; let c = $count ){
+<p [style.background]="$odd ? 'gold' : 'yellowgreen'">{{$index}} => {{i}}</p>
+<p>Total Items : {{$count}}</p>
+<!-- <p>Total Items : {{c}}</p> -->
+@if ($first){
+<p>First item : {{i}}</p>
+} @else if ($last){
+<p>Last item : {{i}}</p>
+} @else{
+<p>{{i}}</p>
+}
+}
 
-<button (click)="onClick()">Click me</button>
+@for(n of nums; track $index){
+<div>
+    <strong>
+        {{n}}
+    </strong>
+    <span> | Index : {{$index}}</span>
+    <span> | First : {{$first}}</span>
+    <span> | Even : {{$even}}</span>
+    <span> | Odd : {{$odd}}</span>
+    <span> | Last : {{$last}}</span>
+    <span> | Total : {{$count}}</span>
+</div>
+}
 
-<input (input)="onInput($event)">
+<!-- @for (u of users; track $index ){
+<h4>{{u.name}}</h4>
+<p>{{u.age}}</p>
+}
 
-<input (keyup)="onKeyUp($event)" (focus)="onFocus()" (blur)="onBlur()">
+@for (f of fruits; track $index; let i = $index ){
+<p>{{f}}</p>
+<button (click)="remove(i)">Delete</button>
+}
 
-
-<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div>
+@for (n of nums; track $index; let i = $index ){
+<p>{{n% 2 == 0 ? 'Even :' +n : 'Odd :' + n}}</p>
+} -->

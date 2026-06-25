@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { Login } from './login/login';
 import { SigninComponent } from './signin/signin';
 // import { RouterOutlet } from '@angular/router';
@@ -11,46 +11,22 @@ import { Events } from './events/events';
   styleUrl: './app.scss'
 })
 export class App {
-  value: string | number = "10"; //  if a variable has multiple datatype then, it is called union type
+  count = signal<number>(2);
+  doubleCount = computed<number>(() => this.count() * 2);
+  tripleCount = computed<number>(() => this.count() * 3);
 
-  // name = 'RV Tutorials';
-  // name = 'Rohit';
-  // count = 0;
-  // handleClick() {
-  //   console.log("Submitted!!")
-  //   this.increament();
-  // }
+  fName = signal<string>('Rohit');
+  lName = signal<string>('Maiti');
+  fullName = computed<string>(() => this.fName() + " " + this.lName());
 
-  // increament() {
-  //   this.count++;
-  // }
+  price = signal<number[]>([10, 20, 30, 40, 50]);
+  total = computed<number>(() => {
+    return this.price().reduce((acc, cur) => acc + cur, 0);
+  })
 
-  onClick() {
-    alert('Clicked');
-  }
 
-  onInput(event: any) {
-    console.log("Inside Input field", event.target.value);
-  }
-
-  onKeyUp(event: any) {
-    console.log("keyUp", event.target.value);
-  }
-
-  onBlur() {
-    console.log("blur Event");
-  }
-
-  onFocus() {
-    console.log("focus Event");
-  }
-
-  onMouse() {
-    console.log("Mouse enter");
-  }
-
-  offMouse() {
-    console.log("Mouse exit");
+  increament() {
+    this.count.set(this.count() + 1);
   }
 
 }

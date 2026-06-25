@@ -1,16 +1,9 @@
-<!-- <h1>{{name}}</h1> -->
-<!-- <p>{{name}}</p>
-<app-events></app-events> -->
-<!-- <app-login></app-login> -->
-<!-- <app=signin></app-signin> -->
-<!-- <h1>{{count}}</h1>
-<button (click)="handleClick()">Submit</button> -->
+<h1>{{count()}}</h1>
+<h2>{{doubleCount()}}</h2>
+<h2>{{tripleCount()}}</h2>
+<button (click)="increament()">+</button>
 
-<button (click)="onClick()">Click me</button>
+<h2>{{fullName()}}</h2>
 
-<input (input)="onInput($event)">
-
-<input (keyup)="onKeyUp($event)" (focus)="onFocus()" (blur)="onBlur()">
-
-
-<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div>
+<h2>{{price()}}</h2>
+<h2>{{total()}}</h2>

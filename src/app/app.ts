@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { Login } from './login/login';
 import { SigninComponent } from './signin/signin';
 // import { RouterOutlet } from '@angular/router';
@@ -11,46 +11,45 @@ import { Events } from './events/events';
   styleUrl: './app.scss'
 })
 export class App {
-  value: string | number = "10"; //  if a variable has multiple datatype then, it is called union type
+  count = signal<number>(0);
+  isDarkMode = signal<boolean>(false);
+  msg = signal<string>("");
 
-  // name = 'RV Tutorials';
-  // name = 'Rohit';
-  // count = 0;
-  // handleClick() {
-  //   console.log("Submitted!!")
-  //   this.increament();
-  // }
+  constructor() {
+    effect(() => {
+      this.count();
+    });
 
-  // increament() {
-  //   this.count++;
-  // }
+    effect(() => {
+      if (this.isDarkMode()) {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'gold';
 
-  onClick() {
-    alert('Clicked');
+      } else {
+        document.body.style.backgroundColor = 'gold';
+        document.body.style.color = 'black';
+
+      }
+    })
+
+    effect(() => {
+      if (this.msg()) {
+        setTimeout(() => {
+          alert(this.msg());
+          this.msg.set("");
+        }, 1000)
+
+      }
+    })
   }
 
-  onInput(event: any) {
-    console.log("Inside Input field", event.target.value);
+  inc() {
+    this.count.update((c) => c + 1);
+    this.isDarkMode.update((m) => !m);
+    // alert(this.count());
   }
 
-  onKeyUp(event: any) {
-    console.log("keyUp", event.target.value);
+  onClickMsg() {
+    this.msg.set("Temp Message!!");
   }
-
-  onBlur() {
-    console.log("blur Event");
-  }
-
-  onFocus() {
-    console.log("focus Event");
-  }
-
-  onMouse() {
-    console.log("Mouse enter");
-  }
-
-  offMouse() {
-    console.log("Mouse exit");
-  }
-
 }

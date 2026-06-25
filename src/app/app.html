@@ -1,16 +1,17 @@
-<!-- <h1>{{name}}</h1> -->
-<!-- <p>{{name}}</p>
-<app-events></app-events> -->
-<!-- <app-login></app-login> -->
-<!-- <app=signin></app-signin> -->
-<!-- <h1>{{count}}</h1>
-<button (click)="handleClick()">Submit</button> -->
-
-<button (click)="onClick()">Click me</button>
-
-<input (input)="onInput($event)">
-
-<input (keyup)="onKeyUp($event)" (focus)="onFocus()" (blur)="onBlur()">
+<!-- @if (isDarkMode()){ -->
+<!-- <div style="background-color: black;"> -->
+<h1>{{count()}}</h1>
+<button (click)="inc()">+</button>
 
 
-<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div>
+<h2>{{msg()}}</h2>
+
+<button (click)="onClickMsg()">Message</button>
+
+<!-- </div> -->
+<!-- } @else {
+<div style="background-color: gold;">
+    <h1>{{count()}}</h1>
+    <button (click)="inc()">+</button>
+</div>
+} -->

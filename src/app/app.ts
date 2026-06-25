@@ -11,46 +11,22 @@ import { Events } from './events/events';
   styleUrl: './app.scss'
 })
 export class App {
-  value: string | number = "10"; //  if a variable has multiple datatype then, it is called union type
+  count = signal(0);  //signal created
+  value = 20;
 
-  // name = 'RV Tutorials';
-  // name = 'Rohit';
-  // count = 0;
-  // handleClick() {
-  //   console.log("Submitted!!")
-  //   this.increament();
-  // }
 
-  // increament() {
-  //   this.count++;
-  // }
-
-  onClick() {
-    alert('Clicked');
+  increament() {
+    this.count.update(c => c + 1); //signal updated can also use, count.set(2)
   }
 
-  onInput(event: any) {
-    console.log("Inside Input field", event.target.value);
+  decrement() {
+    if (this.count() > 0) {
+      this.count.update(c => c - 1); //signal updated can also use, count.set(2)
+    }
   }
 
-  onKeyUp(event: any) {
-    console.log("keyUp", event.target.value);
-  }
-
-  onBlur() {
-    console.log("blur Event");
-  }
-
-  onFocus() {
-    console.log("focus Event");
-  }
-
-  onMouse() {
-    console.log("Mouse enter");
-  }
-
-  offMouse() {
-    console.log("Mouse exit");
+  reset() {
+    this.count.set(0);
   }
 
 }

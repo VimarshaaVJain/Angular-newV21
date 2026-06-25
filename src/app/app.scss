@@ -6,13 +6,57 @@ button {
     cursor: pointer;
 }
 
-.hover {
-    margin-top: 20px;
-    height: 200px;
-    width: 200px;
-    color: black;
-    background-color: yellowgreen;
+.counter-cls {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.btns {
+    margin: 10px;
+}
+
+.count-txt {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.inc-btn {
+    padding: 10px;
+    margin: 2px;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    background-color: rgb(108, 236, 108);
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+.dec-btn {
+    padding: 10px;
+    margin: 2px;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    background-color: rgb(238, 147, 147);
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+.reset-btn {
+    padding: 10px;
+    margin: 2px;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    background-color: lightblue;
+    height: 60px;
+    width: 120px;
+    border-radius: 8px;
+    border: 2px solid white;
 }

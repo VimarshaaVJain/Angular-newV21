@@ -1,16 +1,21 @@
-<!-- <h1>{{name}}</h1> -->
-<!-- <p>{{name}}</p>
-<app-events></app-events> -->
-<!-- <app-login></app-login> -->
-<!-- <app=signin></app-signin> -->
-<!-- <h1>{{count}}</h1>
-<button (click)="handleClick()">Submit</button> -->
+<h2>Signal</h2>
 
-<button (click)="onClick()">Click me</button>
+<p>Value : {{value}}</p>
 
-<input (input)="onInput($event)">
+<p>Count : {{count()}}</p>
 
-<input (keyup)="onKeyUp($event)" (focus)="onFocus()" (blur)="onBlur()">
+<button (click)="count.set(15)">Change Signal</button>
 
+<!-- <button (click)="value++">Change Value</button>   //gives runtime error -->
 
-<div (mouseover)="onMouse()" (mouseleave)="offMouse()" class="hover">Text Hover</div>
+<!-- Counter App using Signals -->
+<div class="counter-cls">
+    <h1>Counter App</h1>
+
+    <p class="count-txt">{{count()}}</p>
+    <div class='btns'>
+        <button class="inc-btn" (click)="increament()">+</button>
+        <button class="dec-btn" (click)="decrement()">-</button>
+        <button class="reset-btn" (click)="reset()">Reset</button>
+    </div>
+</div>
